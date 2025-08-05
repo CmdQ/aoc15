@@ -5,9 +5,19 @@ I solve the packaging material problem.
 "
 Class {
 	#name : #Day02,
-	#superclass : #Object,
+	#superclass : #Day,
 	#category : #AoC2015
 }
+
+{ #category : #expecting }
+Day02 >> answer1 [
+	^ 1606483
+]
+
+{ #category : #expecting }
+Day02 >> answer2 [
+	^ 3842356
+]
 
 { #category : #input }
 Day02 >> input [
@@ -1078,7 +1088,7 @@ Day02 >> solvedPart1 [
 	<gtExample>
 	| res |
 	res := self solvePart: self input with: [ :each | self solveSinglePart1: each ].
-	self assert: res equals: 1606483.
+	self assert: res equals: self answer1.
 	^ res
 ]
 
@@ -1087,6 +1097,6 @@ Day02 >> solvedPart2 [
 	<gtExample>
 	| res |
 	res := self solvePart: self input with: [ :each | self solveSinglePart2: each ].
-	self assert: res equals: 3842356.
+	self assert: res equals: self answer2.
 	^ res
 ]

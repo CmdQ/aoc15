@@ -14,35 +14,61 @@ Template class >> createCode: anArray [
 
 { #category : #'code generation' }
 Template class >> createCodeBody: anArray [
-	^ ' |res|res:= {1}.self assert:res equals: {2}.^res' format: anArray
+	^ ' |res|res:= self solvePart1: {1}.self assert:res equals: {2}.^res' format: anArray
 ]
 
 { #category : #'code generation' }
-Template class >> createDay: anInteger description: aString examples: examplesArray [
-	| className newClass complexBody |
+Template class >> createDay: anInteger withDescription: aString [
+	^ self
+		createDay: anInteger
+		withDescription: aString
+		examples: #()
+		andInput: ''
+]
+
+{ #category : #'code generation' }
+Template class >> createDay: anInteger withDescription: aString andExamples: examplesArray [
+	^ self
+		createDay: anInteger
+		withDescription: aString
+		examples: examplesArray
+		andInput: ''
+]
+
+{ #category : #'code generation' }
+Template class >> createDay: anInteger withDescription: aString andInput: input [
+	^ self
+		createDay: anInteger
+		withDescription: aString
+		examples: #()
+		andInput: input
+]
+
+{ #category : #'code generation' }
+Template class >> createDay: anInteger withDescription: aString examples: examplesArray andInput: input [
+	| newClass |
+	newClass := self createDayClass: anInteger description: aString.
+	self createSimpleMethods: newClass.
+	input
+		ifNotEmpty: [ newClass compile: ('input ^ ''{1}''' format: {input}) classified: 'input' ].
+	examplesArray
+		do: [ :assoc | newClass compile: (self createCode: assoc) classified: 'examples - input' ].
+	self formatClass: newClass.
+	^ newClass
+]
+
+{ #category : #'code generation' }
+Template class >> createDayClass: anInteger description: aString [
+	| className |
 	className := 'Day' , (anInteger printPaddedWith: $0 to: 2).
 	(Smalltalk hasClassNamed: className)
 		ifTrue: [ (Smalltalk classNamed: className) removeFromSystem ].
-	newClass := (Object
-			subclass: className asSymbol
-			instanceVariableNames: ''
-			classVariableNames: ''
-			package: 'AoC2015')
-			classComment: (self createDescription: aString forDay: anInteger).
-	newClass compile: 'input<gtExample>^''''' classified: 'input'.
-	newClass compile: 'solvePart1: aString' classified: 'solution'.
-	newClass compile: 'solvePart2: aString' classified: 'solution'.
-	complexBody := 'solvedPart1<gtExample>'
-			, (self
-					createCodeBody: {'self solvePart1: self input'.
-							nil}).
-	newClass compile: complexBody classified: 'examples - solution'.
-	newClass compile: (complexBody copyReplaceAll: 'Part1' with: 'Part2') classified: 'examples - solution'.
-	examplesArray
-		do: [ :assoc | newClass compile: (self createCode: assoc) classified: 'examples - input' ].
-	newClass class methods do: [ :method | method reformat ].
-	newClass methods do: [ :method | method reformat ].
-	^ newClass
+	^ (Day
+		subclass: className asSymbol
+		instanceVariableNames: ''
+		classVariableNames: ''
+		package: 'AoC2015')
+		classComment: (self createDescription: aString forDay: anInteger)
 ]
 
 { #category : #'code generation' }
@@ -52,4 +78,26 @@ Template class >> createDescription: aString forDay: anInteger [
 I solve the ''{1}'' problem.'
 		format: {aString.
 				anInteger}
+]
+
+{ #category : #'code generation' }
+Template class >> createSimpleMethods: newClass [
+	newClass
+		compile: 'solvePart1: aString self shouldBeImplemented'
+		classified: 'solution'.
+	newClass
+		compile: 'solvePart2: aString self shouldBeImplemented'
+		classified: 'solution'.
+	newClass
+		compile: 'solvedPart1<gtExample>^super solvedPart1'
+		classified: 'examples - solution'.
+	newClass
+		compile: 'solvedPart2<gtExample>^super solvedPart2'
+		classified: 'examples - solution'
+]
+
+{ #category : #formatting }
+Template class >> formatClass: newClass [
+	newClass class methods do: [ :method | method reformat ].
+	newClass methods do: [ :method | method reformat ]
 ]

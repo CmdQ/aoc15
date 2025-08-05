@@ -5,7 +5,7 @@ I solve the 'Perfectly Spherical Houses in a Vacuum' problem.
 "
 Class {
 	#name : #Day03,
-	#superclass : #Object,
+	#superclass : #Day,
 	#classVars : [
 		'Deltas'
 	],
@@ -24,6 +24,16 @@ Day03 class >> initialize [
 					1 @ 0.
 					$^.
 					0 @ 1}
+]
+
+{ #category : #expecting }
+Day03 >> answer1 [
+	^ 2081
+]
+
+{ #category : #expecting }
+Day03 >> answer2 [
+	^ 2341
 ]
 
 { #category : #solution }
@@ -101,20 +111,14 @@ Day03 >> solvePart2: aString [
 		reduce: [ :a :b | a union: b ]) size
 ]
 
-{ #category : #'examples - solution' }
+{ #category : #solution }
 Day03 >> solvedPart1 [
 	<gtExample>
-	| res |
-	res := self solvePart1: self input.
-	self assert: res equals: 2081.
-	^ res
+	^ super solvedPart1
 ]
 
-{ #category : #'examples - solution' }
+{ #category : #'as yet unclassified' }
 Day03 >> solvedPart2 [
 	<gtExample>
-	| res |
-	res := self solvePart2: self input.
-	self assert: res equals: 2341.
-	^ res
+	^ super solvedPart2
 ]
