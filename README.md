@@ -3,7 +3,7 @@
 
 ```st
 Metacello new
-	repository: '';
+	repository: 'github://CmdQ/aoc15:main/src';
 	baseline: 'AoC2015';
 	load
 ```
