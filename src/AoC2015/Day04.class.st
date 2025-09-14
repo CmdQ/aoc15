@@ -9,6 +9,16 @@ Class {
 	#category : #AoC2015
 }
 
+{ #category : #'as yet unclassified' }
+Day04 >> answer1 [
+	^ 346386
+]
+
+{ #category : #'as yet unclassified' }
+Day04 >> answer2 [
+	^ 9958218
+]
+
 { #category : #input }
 Day04 >> input [
 	^ 'iwrupvqb'
@@ -32,14 +42,27 @@ Day04 >> inputAlphabetStart [
 	^ res
 ]
 
+{ #category : #'as yet unclassified' }
+Day04 >> solve: aString withLeadingZeros: anInteger [
+| md5 prefix |
+	md5 := MD5 new.
+	prefix := '0' repeat: anInteger.
+	0
+		to: (2 raisedToInteger: 30)
+		do: [ :n | 
+			((md5 hashMessage: aString , n asString) hex beginsWith: prefix)
+				ifTrue: [ ^ n ] ].
+	^ 'upper threshold too low'
+]
+
 { #category : #solution }
 Day04 >> solvePart1: aString [
-	self shouldBeImplemented
+	^ self solve: aString withLeadingZeros: 5
 ]
 
 { #category : #solution }
 Day04 >> solvePart2: aString [
-	self shouldBeImplemented
+	^ self solve: aString withLeadingZeros: 6
 ]
 
 { #category : #'examples - solution' }
