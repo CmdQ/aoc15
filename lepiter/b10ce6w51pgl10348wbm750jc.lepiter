@@ -1,0 +1,110 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-07-25T20:22:22.666666-07:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-05T22:55:51.917386-07:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UsTGTS73DQCNMKNxDONGug=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Days\n\n[[Day 1: Not Quite Lisp]]\n[[Day 2: I Was Told There Would Be No Math]]\n[[Day 3: Perfectly Spherical Houses in a Vacuum]]\n[[Day 4: The Ideal Stocking Stuffer]]\n[[Day 5: Doesn't He Have Intern-Elves For This?]]\n[[Day 6: Probably a Fire Hazard]]\n[[Day 7: Some Assembly Required]]\n# Creating new classes\n{{gtExample:Template>>dayWithDescription}}\n\n{{gtExample:Template>>dayWithDescriptionExamplesAndInput}}\n\n# Clean up"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-13T12:21:35.712607-07:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-14T16:02:19.704202-07:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "EeptahX7DQCWNYamDBkUoA=="
+				},
+				"code" : "FreeTypeCache cleanUp. Template\rEditorFindReplaceDialogWindow cleanUp.\rUITheme current focusIndicator: nil.\rRubEditingState allInstances\r\tdo: [ :each | each instVarNamed: #undoManager put: nil ].\r4 timesRepeat: [ World doOneCycle ].\r3 timesRepeat: [ Smalltalk garbageCollect ]"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-07-25T20:23:19.372984-07:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-07-25T20:23:19.372984-07:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Advent of Code 2015"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "f8c0c64d-2ef7-0d00-8d2f-262e0ce346ba"
+	}
+}

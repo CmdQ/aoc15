@@ -6,17 +6,16 @@ Class {
 
 { #category : #loading }
 BaselineOfAoC2015 class >> loadLepiter [
-	IceRepository registry  
-		detect: [ :aRepository |
-			aRepository name = '15' ]
+	IceRepository registry
+		detect: [ :aRepository | aRepository name = 'aoc15' ]
 		ifFound: [ :aRepository | 
-			| defaultDatabase currentProperties |
-			defaultDatabase := LeDatabasesRegistry defaultLogicalDatabase.
-			currentProperties := defaultDatabase properties.
-			currentProperties addRegisteredDirectory: aRepository repositoryDirectory / 'lepiter'.
-			defaultDatabase reload ]
-		ifNone: [
-			self inform: 'Repository not found.' ]
+			| db props |
+			db := LeDatabasesRegistry defaultLogicalDatabase.
+			props := db properties.
+			props addRegisteredDirectory: aRepository repositoryDirectory / 'lepiter'.
+			db reload.
+			^ db pageNamed: 'Advent of Code 2015' ]
+		ifNone: [ self inform: 'Repository not found.' ]
 ]
 
 { #category : #baseline }

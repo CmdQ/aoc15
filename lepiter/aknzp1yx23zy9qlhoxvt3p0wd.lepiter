@@ -1,0 +1,110 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-14T21:50:43.04477-07:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-14T21:50:53.426422-07:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "OTmcezH7DQCxFKg9CNSbsg=="
+				},
+				"code" : "day07 := Day07 new"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-14T21:47:44.561751-07:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-14T21:48:04.479358-07:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "a874cDH7DQCwlVaYCNSbsg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Part One\n\nThis year, Santa brought little Bobby Tables a set of wires and bitwise logic gates! Unfortunately, little Bobby is a little under the recommended age range, and he needs help assembling the circuit.\n\nEach wire has an identifier (some lowercase letters) and can carry a 16-bit signal (a number from `0` to `65535`). A signal is provided to each wire by a gate, another wire, or some specific value. Each wire can only get a signal from one source, but can provide its signal to multiple destinations. A gate provides no signal until all of its inputs have a signal.\n\nThe included instructions booklet describes how to connect the parts together: `x AND y -> z` means to connect wires `x` and `y` to an AND gate, and then connect its output to wire `z`.\n\nFor example:\n\n- `123 -> x` means that the signal `123` is provided to wire `x`.\n- `x AND y -> z` means that the bitwise AND of wire `x` and wire `y` is provided to wire `z`.\n- `p LSHIFT 2 -> q` means that the value from wire `p` is left-shifted by `2` and then provided to wire `q`.\n- `NOT e -> f `means that the bitwise complement of the value from wire `e` is provided to wire `f`.\n\nOther possible gates include OR (bitwise OR) and RSHIFT (right-shift). If, for some reason, you'd like to **emulate** the circuit instead, almost all programming languages (for example, C, JavaScript, or Python) provide operators for these gates.\n\nFor example, here is a simple circuit:\n\n```plain\n123 -> x\n456 -> y\nx AND y -> d\nx OR y -> e\nx LSHIFT 2 -> f\ny RSHIFT 2 -> g\nNOT x -> h\nNOT y -> i\n```\n\nAfter it is run, these are the signals on the wires:\n\n```plain\nd: 72\ne: 507\nf: 492\ng: 114\nh: 65412\ni: 65079\nx: 123\ny: 456\n```\n\nIn little Bobby's kit's instructions booklet (provided as your puzzle input), what signal is ultimately provided to **wire `a`**?"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-09-14T21:47:44.539732-07:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-09-14T21:47:44.539732-07:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Day 7: Some Assembly Required"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "cd77f870-31fb-0d00-b094-7d9f08d49bb2"
+	}
+}
