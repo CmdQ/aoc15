@@ -1,3 +1,8 @@
+"
+I'm a day-creating template.
+
+I provide examples to show in Lepiter pages through which you can create new puzzles.
+"
 Class {
 	#name : #Template,
 	#superclass : #Object,

@@ -1,3 +1,6 @@
+"
+I'm a parser class for the wire puzzle.
+"
 Class {
 	#name : #WireParser,
 	#superclass : #PP2CompositeNode,
@@ -10,7 +13,8 @@ Class {
 		'binary',
 		'shift',
 		'wire',
-		'signal'
+		'signal',
+		'output'
 	],
 	#category : #'AoC2015-Wires'
 }
@@ -58,6 +62,11 @@ WireParser >> number [
 	^ #digit asPParser plus flatten ==> [ :s | s asInteger ]
 ]
 
+{ #category : #'as yet unclassified' }
+WireParser >> output [
+	^ (arrow , variable) ==> [ :a | (a at: 2) name ]
+]
+
 { #category : #grammar }
 WireParser >> shift [
 	^ (variable , ($L asPParser / $R asPParser , 'SHIFT' asPParser) trim , number
@@ -82,7 +91,7 @@ WireParser >> start [
 
 { #category : #grammar }
 WireParser >> variable [
-	^ #letter asPParser plus flatten
+	^ #letter asPParser plus flatten ==> [ :s | WireLabel new name: s ]
 ]
 
 { #category : #grammar }

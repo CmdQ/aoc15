@@ -1,3 +1,8 @@
+"
+I'm a simple pass-through wire.
+
+I don't provide logic, I just connect things.
+"
 Class {
 	#name : #Wire,
 	#superclass : #Signal,
@@ -21,8 +26,5 @@ Wire >> input: anObject [
 
 { #category : #evaluating }
 Wire >> moveElectrons: inGraph [
-	| hop |
-	hop := self input.
-	hop isString ifTrue: [ hop := inGraph at: hop ].
-	^ hop measure: inGraph
+	^ self input measure: inGraph
 ]

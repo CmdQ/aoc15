@@ -381,8 +381,10 @@ Day07 >> makeGraph: anArray [
 	re := Dictionary new.
 	anArray
 		do: [ :e | 
-			self assert: (re includesKey: e output) not.
-			re at: e output put: e ].
+			| name |
+			name := e output name.
+			self assert: (re includesKey: name) not.
+			re at: name put: e ].
 	^ re
 ]
 

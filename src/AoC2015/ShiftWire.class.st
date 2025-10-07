@@ -1,3 +1,8 @@
+"
+I'm a shift wire.
+
+I take an input and shift it to the left or the right.
+"
 Class {
 	#name : #ShiftWire,
 	#superclass : #Wire,
@@ -19,5 +24,5 @@ ShiftWire >> amount: anObject [
 
 { #category : #evaluating }
 ShiftWire >> moveElectrons: inGraph [
-	^ ((inGraph at: self input) measure: inGraph) bitShift: self amount
+	^ (self input measure: inGraph) bitShift: self amount
 ]

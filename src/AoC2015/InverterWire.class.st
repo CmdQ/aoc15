@@ -1,3 +1,8 @@
+"
+I'm an inverter wire.
+
+I take an input and output the logical inverse.
+"
 Class {
 	#name : #InverterWire,
 	#superclass : #Wire,
@@ -6,5 +11,5 @@ Class {
 
 { #category : #evaluating }
 InverterWire >> moveElectrons: inGraph [
-	^ ((inGraph at: self input) measure: inGraph) bitInvert
+	^ (self input measure: inGraph) bitInvert
 ]

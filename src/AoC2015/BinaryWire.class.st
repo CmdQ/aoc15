@@ -1,3 +1,8 @@
+"
+I'm a binary operation wire.
+
+I compute the AND or OR of two inputs.
+"
 Class {
 	#name : #BinaryWire,
 	#superclass : #Wire,
@@ -20,14 +25,11 @@ BinaryWire >> combiner: anObject [
 
 { #category : #'evaluating\t' }
 BinaryWire >> moveElectrons: inGraph [
-	| hop in2 |
-	hop := self input.
-	hop isString ifTrue: [ hop := inGraph at: hop ].
-	self assert: (hop isKindOf: Signal).
-	in2 := (inGraph at: self secondInput) measure: inGraph.
-	^ (hop measure: inGraph)
+	| second |
+	second := self secondInput measure: inGraph.
+	^ (self input measure: inGraph)
 		perform: self combiner
-		withArguments: (Array with: in2)
+		withArguments: (Array with: second)
 ]
 
 { #category : #accessing }

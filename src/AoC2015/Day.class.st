@@ -1,3 +1,8 @@
+"
+I'm the abstract base class to derive day classes from.
+
+I provide overridable methods for returning the answers, wire up passing the input to the solve functions and hoving both as examples.
+"
 Class {
 	#name : #Day,
 	#superclass : #Object,
