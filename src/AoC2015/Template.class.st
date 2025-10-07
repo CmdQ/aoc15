@@ -96,6 +96,30 @@ Template class >> createSimpleMethods: newClass [
 		classified: 'examples - solution'
 ]
 
+{ #category : #'examples - snippet' }
+Template class >> dayWithDescription [
+	<gtExample>
+	| re |
+	re := self createDay: 7 withDescription: 'Some Assembly Required'.
+	^ re
+]
+
+{ #category : #'examples - snippet' }
+Template class >> dayWithInput [
+	<gtExample>
+	| re |
+	re := self.
+	^ re
+]
+
+{ #category : #'examples - snippet' }
+Template class >> dayWithInputAndExamples [
+	<gtExample>
+	| re |
+	re := self.
+	^ re
+]
+
 { #category : #formatting }
 Template class >> formatClass: newClass [
 	newClass class methods do: [ :method | method reformat ].

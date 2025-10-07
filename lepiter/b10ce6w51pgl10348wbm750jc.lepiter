@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-05T22:55:51.917386-07:00"
+						"dateAndTimeString" : "2025-10-05T23:24:12.286915-07:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Days\n\n[[Day 1: Not Quite Lisp]]\n[[Day 2: I Was Told There Would Be No Math]]\n[[Day 3: Perfectly Spherical Houses in a Vacuum]]\n[[Day 4: The Ideal Stocking Stuffer]]\n[[Day 5: Doesn't He Have Intern-Elves For This?]]\n[[Day 6: Probably a Fire Hazard]]\n[[Day 7: Some Assembly Required]]\n# Creating new classes\n{{gtExample:Template>>dayWithDescription}}\n\n{{gtExample:Template>>dayWithDescriptionExamplesAndInput}}\n\n# Clean up"
+				"string" : "# Days\n\n[[Day 1: Not Quite Lisp]]\n[[Day 2: I Was Told There Would Be No Math]]\n[[Day 3: Perfectly Spherical Houses in a Vacuum]]\n[[Day 4: The Ideal Stocking Stuffer]]\n[[Day 5: Doesn't He Have Intern-Elves For This?]]\n[[Day 6: Probably a Fire Hazard]]\n[[Day 7: Some Assembly Required]]\n# Creating new classes\nYou should use the class methods on {{gtClass:Template class}}.\n\n{{gtExample:Template class>>dayWithDescription}}\n\n{{gtExample:Template class}}\n# Clean up"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-09-14T16:02:19.704202-07:00"
+						"dateAndTimeString" : "2025-10-05T23:06:59.525192-07:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "EeptahX7DQCWNYamDBkUoA=="
 				},
-				"code" : "FreeTypeCache cleanUp. Template\rEditorFindReplaceDialogWindow cleanUp.\rUITheme current focusIndicator: nil.\rRubEditingState allInstances\r\tdo: [ :each | each instVarNamed: #undoManager put: nil ].\r4 timesRepeat: [ World doOneCycle ].\r3 timesRepeat: [ Smalltalk garbageCollect ]"
+				"code" : "FreeTypeCache cleanUp.\rEditorFindReplaceDialogWindow cleanUp.\rUITheme current focusIndicator: nil.\rRubEditingState allInstances\r\tdo: [ :each | each instVarNamed: #undoManager put: nil ].\r4 timesRepeat: [ World doOneCycle ].\r3 timesRepeat: [ Smalltalk garbageCollect ]"
 			}
 		]
 	},

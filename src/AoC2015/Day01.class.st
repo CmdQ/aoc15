@@ -18,12 +18,12 @@ Day01 >> afterFive [
 	^ res
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #expecting }
 Day01 >> answer1 [
 	^ 232
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #expecting }
 Day01 >> answer2 [
 	^ 1783
 ]
@@ -113,13 +113,13 @@ Day01 >> solvePart2: aString [
 			level < 0 ifTrue: [ ^ index ] ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'examples - solution' }
 Day01 >> solvedPart1 [
 	<gtExample>
 	^ super solvedPart1
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'examples - solution' }
 Day01 >> solvedPart2 [
 	<gtExample>
 	^ super solvedPart2

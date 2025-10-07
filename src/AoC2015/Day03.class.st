@@ -117,7 +117,7 @@ Day03 >> solvedPart1 [
 	^ super solvedPart1
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #solution }
 Day03 >> solvedPart2 [
 	<gtExample>
 	^ super solvedPart2

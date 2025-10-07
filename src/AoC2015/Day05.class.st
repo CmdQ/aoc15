@@ -4,12 +4,12 @@ Class {
 	#category : #AoC2015
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #expecting }
 Day05 >> answer1 [
 	^ 238
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #expecting }
 Day05 >> answer2 [
 	^ 69
 ]
@@ -22,7 +22,7 @@ Day05 >> doubleChar: aString [
 	^ false
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'examples - input\t' }
 Day05 >> example1 [
 	<gtExample>
 	| re |
@@ -31,7 +31,7 @@ Day05 >> example1 [
 	^ re
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'examples - input\t' }
 Day05 >> example2 [
 	<gtExample>
 	| re |
@@ -40,7 +40,7 @@ Day05 >> example2 [
 	^ re
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'examples - input\t' }
 Day05 >> example3 [
 	<gtExample>
 	| re |
@@ -49,7 +49,7 @@ Day05 >> example3 [
 	^ re
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'examples - input\t' }
 Day05 >> example4 [
 	<gtExample>
 	| re |
@@ -58,7 +58,7 @@ Day05 >> example4 [
 	^ re
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'examples - input\t' }
 Day05 >> example5 [
 	<gtExample>
 	| re |
@@ -67,7 +67,7 @@ Day05 >> example5 [
 	^ re
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'examples - input\t' }
 Day05 >> example6 [
 	<gtExample>
 	| re |
@@ -1081,7 +1081,7 @@ cqfikbgxvjmnfncy
 '
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #solution }
 Day05 >> isNice2: aString [
 	^ (self spaced1: aString) and: [ self pairTwice: aString ]
 ]
@@ -1096,7 +1096,7 @@ Day05 >> offending: aString [
 	^ aString size > (aString findAnySubstring: #('ab' 'cd' 'pq' 'xy') startingAt: 1)
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #solution }
 Day05 >> pairTwice: aString [
 	1
 		to: aString size - 3
@@ -1128,7 +1128,7 @@ Day05 >> solvedPart2 [
 	^ super solvedPart2
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #solution }
 Day05 >> spaced1: aString [
 	3
 		to: aString size

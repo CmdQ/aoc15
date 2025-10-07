@@ -9,12 +9,12 @@ Class {
 	#category : #AoC2015
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #expecting }
 Day04 >> answer1 [
 	^ 346386
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #expecting }
 Day04 >> answer2 [
 	^ 9958218
 ]
@@ -42,7 +42,7 @@ Day04 >> inputAlphabetStart [
 	^ res
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #solution }
 Day04 >> solve: aString withLeadingZeros: anInteger [
 | md5 prefix |
 	md5 := MD5 new.
