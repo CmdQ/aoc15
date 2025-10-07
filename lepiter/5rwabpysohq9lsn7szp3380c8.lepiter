@@ -1,0 +1,147 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-07T13:01:16.252038-07:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-07T13:01:31.858542-07:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nxODxPj8DQCfuy4GDpOLYQ=="
+				},
+				"code" : "day08 := Day08 new."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-07T12:17:08.811068-07:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-08T11:07:03.034026-07:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ZlW2Jvj8DQCfeILJDpOLYQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Part One\n\nSpace on the sleigh is limited this year, and so Santa will be bringing his list as a digital copy. He needs to know how much space it will take up when stored.\n\nIt is common in many programming languages to provide a way to escape special characters in strings. For example, C, JavaScript, Perl, Python, and even PHP handle special characters in very similar ways.\n\nHowever, it is important to realize the difference between the number of characters **in the code representation of the string literal** and the number of characters **in the in-memory string itself**.\n\nFor example:\n\n- `\"\"` is 2 characters of code (the two double quotes), but the string contains zero characters.\n- `\"abc\"` is 5 characters of code, but 3 characters in the string data.\n- `\"aaa\\\"aaa\"` is 10 characters of code, but the string itself contains six \"a\" characters and a single, escaped quote character, for a total of 7 characters in the string data.\n- `\"\\x27\"` is 6 characters of code, but the string itself contains just one - an apostrophe (`'`), escaped using hexadecimal notation.\n\nSanta's list is a file that contains many double-quoted string literals, one on each line. The only escape sequences used are `\\\\` (which represents a single backslash), `\\\"` (which represents a lone double-quote character), and `\\x` plus two hexadecimal characters (which represents a single character with that ASCII code).\n\nDisregarding the whitespace in the file, what is the number of characters of code for string literals minus the number of characters in memory for the values of the strings in total for the entire file?\n\nFor example, given the four strings above, the total number of characters of string code `(2 + 5 + 10 + 6 = 23)` minus the total number of characters in memory for string values `(0 + 3 + 7 + 1 = 11)` is `23 - 11 = 12`.\n\n{{gtExample:Day08>>solvedPart1}}"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-08T11:07:15.05907-07:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-08T11:07:34.15267-07:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "siGWSgv9DQCj9OEXCug4LA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Part Two\n\nNow, let's go the other way. In addition to finding the number of characters of code, you should now **encode each code representation as a new string** and find the number of characters of the new encoded representation, including the surrounding double quotes.\n\nFor example:\n\n- `\"\"` encodes to `\"\\\"\\\"\"`, an increase from 2 characters to 6.\n- `\"abc\"` encodes to `\"\\\"abc\\\"\"`, an increase from 5 characters to 9.\n- `\"aaa\\\"aaa\"` encodes to `\"\\\"aaa\\\\\\\"aaa\\\"\"`, an increase from 10 characters to 16.\n- `\"\\x27\"` encodes to `\"\\\"\\\\x27\\\"\"`, an increase from 6 characters to 11.\n\nYour task is to find **the total number of characters to represent the newly encoded strings** minus **the number of characters of code in each original string literal**. For example, for the strings above, the total encoded length `(6 + 9 + 16 + 11 = 42)` minus the characters in the original code representation (23, just like in the first part of this puzzle) is `42 - 23 = 19`.\n\n{{gtExample:Day08>>solvedPart2}}"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-07T12:17:08.77784-07:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-07T12:17:08.77784-07:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Day 8: Matchsticks"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "b8d2b526-f8fc-0d00-9f77-a5b20e938b61"
+	}
+}

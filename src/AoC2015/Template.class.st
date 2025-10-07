@@ -121,7 +121,10 @@ Template class >> dayWithInput [
 Template class >> dayWithInputAndExamples [
 	<gtExample>
 	| re |
-	re := self.
+	re := self
+			createDay: 8
+			withDescription: 'Matchsticks'
+			andExamples: #(#(#Empty '""' 0) #(#Abc ' "abc" ' 2) #(#EscapedQuote '"aaa\"aaa"' 3) #(#Numeric '"\x27"' 5)).
 	^ re
 ]
 
