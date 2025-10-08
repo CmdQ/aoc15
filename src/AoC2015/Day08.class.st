@@ -9,17 +9,6 @@ Class {
 	#category : #AoC2015
 }
 
-{ #category : #solution }
-Day08 class >> encode1: aString [
-	| dict |
-	dict := Dictionary new
-			at: $\ put: 2;
-			at: $" put: 2;
-			yourself.
-	^ (aString inject: 2 into: [ :acc :elm | acc + (dict at: elm ifAbsent: 1) ])
-		- aString size
-]
-
 { #category : #expecting }
 Day08 >> answer1 [
 	^ 1333
@@ -31,33 +20,37 @@ Day08 >> answer2 [
 ]
 
 { #category : #solution }
-Day08 >> decode1: aString [
-	"We need the length of the string minus the number of actual characters."
+Day08 >> countNonQuotes: char [
+	char = $" ifTrue: [ ^ 0 ].
+	^ 1
+]
 
-	| len chars i last ws opened |
-	chars := ws := opened := 0.
-	last := nil.
-	len := aString size.
-	i := 1.
-	[ i <= len ]
-		whileTrue: [ | c |
-			c := aString at: i.
-			Transcript show: c.
-			last = $\
-				ifTrue: [ ('"\' includes: c)
-						ifTrue: [ chars := chars + 1 ]
-						ifFalse: [ c = $x
-								ifTrue: [ chars := chars + 1.
-									i := i + 2 ] ].
-					last := nil ]
-				ifFalse: [ c = $\
-						ifTrue: [ last := c ]
-						ifFalse: [ c = $"
-								ifTrue: [ opened := opened + 1 ]
-								ifFalse: [ c isSeparator ifTrue: [ ws := ws + 1 ] ifFalse: [ chars := chars + 1 ] ] ] ].
-			i := i + 1 ].
-	self assert: opened = 2 description: 'more than 2 quotes'.
-	^ len - chars - ws
+{ #category : #solution }
+Day08 >> countValidChars: stream [
+	| count escaped |
+	count := 0.
+	escaped := false.
+
+	[ stream atEnd ]
+		whileFalse: [ | c |
+			c := stream next.
+			escaped
+				ifTrue: [ escaped := false.
+					count := count + (self handleEscape: c in: stream) ]
+				ifFalse: [ escaped := c = $\.
+					escaped not ifTrue: [ count := count + (self countNonQuotes: c) ] ] ].
+	^ count
+]
+
+{ #category : #solution }
+Day08 >> handleEscape: c in: stream [
+	c = $x
+		ifTrue: [ stream
+				next;
+				next.
+			^ 1 ].
+	('"\' includes: c) ifTrue: [ ^ 1 ].
+	^ 0
 ]
 
 { #category : #'input\t' }
@@ -403,16 +396,19 @@ Day08 >> inputNumeric [
 
 { #category : #solution }
 Day08 >> solvePart1: aString [
-	^ (aString lines collect: [ :l | self decode1: l ])
-		inject: 0
-		into: [ :acc :each | acc + each ]
+	^ aString size - (self countValidChars: aString readStream)
 ]
 
 { #category : #solution }
 Day08 >> solvePart2: aString [
-	^ (aString lines collect: [ :l | Day08 encode1: l ])
-		inject: 0
-		into: [ :acc :each | acc + each ]
+	| dict |
+	dict := Dictionary new
+			at: $\ put: 2;
+			at: $" put: 2;
+			at: Character linefeed put: 3;
+			yourself.	"2 extra quotes per line"
+	^ (aString inject: 0 into: [ :acc :elm | acc + (dict at: elm ifAbsent: 1) ])
+		- aString size
 ]
 
 { #category : #'examples - solution' }
