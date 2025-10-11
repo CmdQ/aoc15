@@ -1,0 +1,147 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-11T13:17:59.424633-07:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-11T13:18:10.946895-07:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "iMard0n9DQCQ8iTtCBbb7Q=="
+				},
+				"code" : "day09 := Day09 new"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-08T18:36:42.325306-07:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-11T13:17:18.564534-07:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cTiHkRH9DQCs5wYADcDybg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Part One\n\nEvery year, Santa manages to deliver all of his presents in a single night.\n\nThis year, however, he has some new locations to visit; his elves have provided him the distances between every pair of locations. He can start and end at any two (different) locations he wants, but he must visit each location exactly once. What is the **shortest distance** he can travel to achieve this?\n\nFor example, given the following distances:\n\n```plain\nLondon to Dublin = 464\nLondon to Belfast = 518\nDublin to Belfast = 141\n```\n\nThe possible routes are therefore:\n\n```plain\nDublin -> London -> Belfast = 982\nLondon -> Dublin -> Belfast = 605\nLondon -> Belfast -> Dublin = 659\nDublin -> Belfast -> London = 659\nBelfast -> Dublin -> London = 605\nBelfast -> London -> Dublin = 982\n```\n\nThe shortest of these is `London -> Dublin -> Belfast = 605`, and so the answer is 605 in this example.\n\nWhat is the distance of the shortest route?\n\n{{gtExample:Day09>>solvedPart1}}"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-11T13:16:45.540493-07:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-11T13:17:01.418885-07:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "uGREc0n9DQCP50uGCBbb7Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Part Two\n\nThe next year, just to show off, Santa decides to take the route with the **longest distance** instead.\n\nHe can still start and end at any two (different) locations he wants, and he still must visit each location exactly once.\n\nFor example, given the distances above, the longest route would be 982 via (for example) `Dublin -> London -> Belfast`.\n\nWhat is the distance of the longest route?\n\n{{gtExample:Day09>>solvedPart2}}"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-08T18:36:35.033745-07:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-08T18:36:35.033745-07:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Day 9: All in a Single Night"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "87b18691-11fd-0d00-ace6-d5f90dc0f26e"
+	}
+}

@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-07T13:10:13.21806-07:00"
+						"dateAndTimeString" : "2025-10-08T18:36:23.84158-07:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Days\n\n[[Day 1: Not Quite Lisp]]\n[[Day 2: I Was Told There Would Be No Math]]\n[[Day 3: Perfectly Spherical Houses in a Vacuum]]\n[[Day 4: The Ideal Stocking Stuffer]]\n[[Day 5: Doesn't He Have Intern-Elves For This?]]\n[[Day 6: Probably a Fire Hazard]]\n[[Day 7: Some Assembly Required]]\n[[Day 8: Matchsticks]]\n# Creating new classes\nYou should use the class methods on {{gtClass:Template class}}.\n\n{{gtExample:Template class>>dayWithDescription}}\n\n{{gtExample:Template class>>dayWithInputAndExamples}}\n# Clean up"
+				"string" : "# Days\n\n[[Day 1: Not Quite Lisp]]\n[[Day 2: I Was Told There Would Be No Math]]\n[[Day 3: Perfectly Spherical Houses in a Vacuum]]\n[[Day 4: The Ideal Stocking Stuffer]]\n[[Day 5: Doesn't He Have Intern-Elves For This?]]\n[[Day 6: Probably a Fire Hazard]]\n[[Day 7: Some Assembly Required]]\n[[Day 8: Matchsticks]]\n[[Day 9: All in a Single Night]]\n# Creating new classes\nYou should use the class methods on {{gtClass:Template class}}.\n\n{{gtExample:Template class>>dayWithDescription}}\n\n{{gtExample:Template class>>dayWithExamples}}\n# Clean up"
 			},
 			{
 				"__type" : "pharoSnippet",

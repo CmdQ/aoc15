@@ -110,21 +110,23 @@ Template class >> dayWithDescription [
 ]
 
 { #category : #'examples - snippet' }
-Template class >> dayWithInput [
+Template class >> dayWithExamples [
 	<gtExample>
 	| re |
-	re := self.
+	re := self
+			createDay: 9
+			withDescription: 'All in a Single Night'
+			andExamples: #(#(#example 'London to Dublin = 464
+London to Belfast = 518
+Dublin to Belfast = 141' 605)).
 	^ re
 ]
 
 { #category : #'examples - snippet' }
-Template class >> dayWithInputAndExamples [
+Template class >> dayWithInput [
 	<gtExample>
 	| re |
-	re := self
-			createDay: 8
-			withDescription: 'Matchsticks'
-			andExamples: #(#(#Empty '""' 0) #(#Abc ' "abc" ' 2) #(#EscapedQuote '"aaa\"aaa"' 3) #(#Numeric '"\x27"' 5)).
+	re := self.
 	^ re
 ]
 
