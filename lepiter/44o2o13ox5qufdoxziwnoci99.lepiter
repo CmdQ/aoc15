@@ -1,0 +1,147 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-13T10:23:20.320465-07:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-13T10:23:49.189799-07:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8hXAQm/9DQC0x8UvA2DBRQ=="
+				},
+				"code" : "day10 := Day10 new"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-13T10:23:13.549699-07:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-13T12:32:18.719138-07:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UJseQm/9DQC0YZkNA2DBRQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Part One\n\nToday, the Elves are playing a game called look-and-say. They take turns making sequences by reading aloud the previous sequence and using that reading as the next sequence. For example, `211` is read as \"one two, two ones\", which becomes `1221` (`1` `2`, `2` `1`s).\r\n\r\nLook-and-say sequences are generated iteratively, using the previous value as input for the next step. For each step, take the previous value, and replace each run of digits (like `111`) with the number of digits (`3`) followed by the digit itself (`1`).\r\n\r\nFor example:\r\n\r\n- `1` becomes `11` (`1` copy of digit `1`).\r\n- `11` becomes `21` (`2` copies of digit `1`).\r\n- `21` becomes `1211` (one `2` followed by one `1`).\r\n- `1211` becomes `111221` (one `1`, one `2`, and two 1`s`).\r\n- `111221` becomes `312211` (three `1`s, two `2`s, and one `1`).\r\n\r\nStarting with the digits in your puzzle input, apply this process 40 times. What is **the length of the result**?\n\n{{gtExample:Day10>>solvedPart1}}"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-13T10:23:23.783258-07:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-13T12:32:30.905541-07:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "euz0Qm/9DQC0yTK2A2DBRQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Part Two\n\nNeat, right? You might also enjoy hearing John Conway talking about this sequence (that's **Conway of Conway's Game of Life** fame).\r\n\r\nNow, starting again with the digits in your puzzle input, apply this process **50** times. What is **the length of the new result**?\n\n{{gtExample:Day10>>solvedPart2}}"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-13T10:23:09.713407-07:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-13T10:23:09.713407-07:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Day 10: Elves Look, Elves Say"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "6d3b1e42-6ffd-0d00-b460-2e380360c145"
+	}
+}

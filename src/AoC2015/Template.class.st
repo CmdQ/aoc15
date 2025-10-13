@@ -123,10 +123,14 @@ Dublin to Belfast = 141' 605)).
 ]
 
 { #category : #'examples - snippet' }
-Template class >> dayWithInput [
+Template class >> dayWithExamplesAndInput [
 	<gtExample>
 	| re |
-	re := self.
+	re := self
+			createDay: 10
+			withDescription: 'Elves Look, Elves Say'
+			examples: #(#($1 '1' 11) #($2 '11' 21) #($3 '21' 1211) #($4 '1211' 111221) #($5 '111221' 312211))
+			andInput: '1113222113'.
 	^ re
 ]
 
