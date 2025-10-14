@@ -6,7 +6,7 @@ I solve the 'Matchsticks' problem.
 Class {
 	#name : #Day08,
 	#superclass : #Day,
-	#category : #AoC2015
+	#category : #'AoC2015-Encode-Decode'
 }
 
 { #category : #expecting }
@@ -17,40 +17,6 @@ Day08 >> answer1 [
 { #category : #'expecting\t' }
 Day08 >> answer2 [
 	^ 2046
-]
-
-{ #category : #solution }
-Day08 >> countNonQuotes: char [
-	char = $" ifTrue: [ ^ 0 ].
-	^ 1
-]
-
-{ #category : #solution }
-Day08 >> countValidChars: stream [
-	| count escaped |
-	count := 0.
-	escaped := false.
-
-	[ stream atEnd ]
-		whileFalse: [ | c |
-			c := stream next.
-			escaped
-				ifTrue: [ escaped := false.
-					count := count + (self handleEscape: c in: stream) ]
-				ifFalse: [ escaped := c = $\.
-					escaped not ifTrue: [ count := count + (self countNonQuotes: c) ] ] ].
-	^ count
-]
-
-{ #category : #solution }
-Day08 >> handleEscape: c in: stream [
-	c = $x
-		ifTrue: [ stream
-				next;
-				next.
-			^ 1 ].
-	('"\' includes: c) ifTrue: [ ^ 1 ].
-	^ 0
 ]
 
 { #category : #'input\t' }
@@ -396,7 +362,10 @@ Day08 >> inputNumeric [
 
 { #category : #solution }
 Day08 >> solvePart1: aString [
-	^ aString size - (self countValidChars: aString readStream)
+	| d |
+	d := CountingDecoder new.
+	aString do: [ :c | d process: c ].
+	^ d length - d validChars
 ]
 
 { #category : #solution }
@@ -405,8 +374,8 @@ Day08 >> solvePart2: aString [
 	dict := Dictionary new
 			at: $\ put: 2;
 			at: $" put: 2;
-			at: Character linefeed put: 3;
-			yourself.	"2 extra quotes per line"
+			at: Character cr put: 3;
+			yourself.
 	^ (aString inject: 0 into: [ :acc :elm | acc + (dict at: elm ifAbsent: 1) ])
 		- aString size
 ]
