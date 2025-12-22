@@ -127,10 +127,10 @@ Template class >> dayWithExamplesAndInput [
 	<gtExample>
 	| re |
 	re := self
-			createDay: 10
-			withDescription: 'Elves Look, Elves Say'
-			examples: #(#($1 '1' 11) #($2 '11' 21) #($3 '21' 1211) #($4 '1211' 111221) #($5 '111221' 312211))
-			andInput: '1113222113'.
+			createDay: 11
+			withDescription: 'Corporate Policy'
+			examples: #(#(#Start 'abcdefgh' 'abcdffaa') #(#Middle 'ghijklmn' 'ghjaabcc'))
+			andInput: 'cqjxjnds'.
 	^ re
 ]
 
