@@ -128,12 +128,14 @@ Day09 >> solvePart: aString cmp: msg [
 
 { #category : #'examples - solution' }
 Day09 >> solvedPart1 [
+	<noTest>
 	<gtExample>
 	^ super solvedPart1
 ]
 
 { #category : #'examples - solution' }
 Day09 >> solvedPart2 [
+	<noTest>
 	<gtExample>
 	^ super solvedPart2
 ]

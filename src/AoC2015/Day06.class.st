@@ -371,12 +371,14 @@ Day06 >> solvePart: aString withFunctions: changes [
 
 { #category : #'examples - solution' }
 Day06 >> solvedPart1 [
+	<noTest>
 	<gtExample>
 	^ super solvedPart1
 ]
 
 { #category : #'examples - solution' }
 Day06 >> solvedPart2 [
+	<noTest>
 	<gtExample>
 	^ super solvedPart2
 ]

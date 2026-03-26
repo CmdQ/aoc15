@@ -97,10 +97,10 @@ Template class >> createSimpleMethods: newClass [
 		compile: 'solvePart2: aString self shouldBeImplemented'
 		classified: 'solution'.
 	newClass
-		compile: 'solvedPart1<gtExample>^super solvedPart1'
+		compile: 'solvedPart1<noTest><gtExample>^super solvedPart1'
 		classified: 'examples - solution'.
 	newClass
-		compile: 'solvedPart2<gtExample>^super solvedPart2'
+		compile: 'solvedPart2<noTest><gtExample>^super solvedPart2'
 		classified: 'examples - solution'
 ]
 
