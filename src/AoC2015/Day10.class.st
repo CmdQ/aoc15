@@ -112,6 +112,8 @@ Day10 >> atoms [
 
 { #category : #input }
 Day10 >> input [
+	<noTest>
+	<gtExample>
 	^ '1113222113'
 ]
 

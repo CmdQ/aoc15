@@ -34,7 +34,10 @@ NOT y -> i'
 ]
 
 { #category : #'input\t' }
-Day07 >> input [ ^ 'bn RSHIFT 2 -> bo
+Day07 >> input [
+	<noTest>
+	<gtExample>
+	^ 'bn RSHIFT 2 -> bo
 lf RSHIFT 1 -> ly
 fo RSHIFT 3 -> fq
 cj OR cp -> cq

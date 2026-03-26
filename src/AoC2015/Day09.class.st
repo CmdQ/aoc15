@@ -38,6 +38,8 @@ Day09 >> distance: cities [
 
 { #category : #'input\t' }
 Day09 >> input [
+	<noTest>
+	<gtExample>
 	^ 'Faerun to Tristram = 65
 Faerun to Tambi = 129
 Faerun to Norrath = 144

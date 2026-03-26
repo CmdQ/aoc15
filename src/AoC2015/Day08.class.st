@@ -21,6 +21,8 @@ Day08 >> answer2 [
 
 { #category : #'input\t' }
 Day08 >> input [
+	<noTest>
+	<gtExample>
 	^ '"sjdivfriyaaqa\xd2v\"k\"mpcu\"yyu\"en"
 "vcqc"
 "zbcwgmbpijcxu\"yins\"sfxn"

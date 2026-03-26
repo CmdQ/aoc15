@@ -78,6 +78,8 @@ Day05 >> example6 [
 
 { #category : #input }
 Day05 >> input [
+	<noTest>
+	<gtExample>
 	^ 'zgsnvdmlfuplrubt
 vlhagaovgqjmgvwq
 ffumlmqwfcsyqpss

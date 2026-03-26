@@ -55,7 +55,10 @@ Template class >> createDay: anInteger withDescription: aString examples: exampl
 	newClass := self createDayClass: anInteger description: aString.
 	self createSimpleMethods: newClass.
 	input
-		ifNotEmpty: [ newClass compile: ('input ^ ''{1}''' format: {input}) classified: 'input' ].
+		ifNotEmpty: [
+			newClass
+				compile: ('input<noTest><gtExample> ^ ''{1}''' format: {input})
+				classified: 'input' ].
 	examplesArray
 		do: [ :assoc | newClass compile: (self createCode: assoc) classified: 'examples - input' ].
 	self formatClass: newClass.
@@ -103,6 +106,7 @@ Template class >> createSimpleMethods: newClass [
 
 { #category : #'examples - snippet' }
 Template class >> dayWithDescription [
+	<noTest>
 	<gtExample>
 	| re |
 	re := self createDay: 7 withDescription: 'Some Assembly Required'.
@@ -111,6 +115,7 @@ Template class >> dayWithDescription [
 
 { #category : #'examples - snippet' }
 Template class >> dayWithExamples [
+	<noTest>
 	<gtExample>
 	| re |
 	re := self
@@ -124,6 +129,7 @@ Dublin to Belfast = 141' 605)).
 
 { #category : #'examples - snippet' }
 Template class >> dayWithExamplesAndInput [
+	<noTest>
 	<gtExample>
 	| re |
 	re := self
