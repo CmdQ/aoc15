@@ -21,6 +21,8 @@ Day04 >> answer2 [
 
 { #category : #input }
 Day04 >> input [
+	<noTest>
+	<gtExample>
 	^ 'iwrupvqb'
 ]
 

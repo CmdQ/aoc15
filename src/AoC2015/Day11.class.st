@@ -11,6 +11,8 @@ Class {
 
 { #category : #input }
 Day11 >> input [
+	<noTest>
+	<gtExample>
 	^ 'cqjxjnds'
 ]
 
