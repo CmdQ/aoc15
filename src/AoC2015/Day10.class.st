@@ -199,14 +199,12 @@ Day10 >> solvePart2: aString [
 
 { #category : #'examples - solution' }
 Day10 >> solvedPart1 [
-	<noTest>
 	<gtExample>
 	^ super solvedPart1
 ]
 
 { #category : #'examples - solution' }
 Day10 >> solvedPart2 [
-	<noTest>
 	<gtExample>
 	^ super solvedPart2
 ]
