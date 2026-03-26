@@ -21,6 +21,7 @@ Day02 >> answer2 [
 
 { #category : #input }
 Day02 >> input [
+	<noTest>
 	<gtExample>
 	^ '20x3x11
 15x27x5

@@ -21,6 +21,7 @@ Day07 >> answer2 [
 
 { #category : #'examples - input' }
 Day07 >> example [
+	<noTest>
 	<gtExample>
 	^ '123 -> x
 456 -> y
